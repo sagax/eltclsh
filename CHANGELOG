@@ -1,0 +1,115 @@
+eltclsh 1.15 released march 2, 2015
+
+ 47. Fix potential segfault when printing interactive prompt.
+ 46. Do not hardcode .so in pkgIndex.tcl
+
+eltclsh 1.14 released december 6, 2012
+
+ 45. Add new el::history sub-commands: event, change and clear.
+
+eltclsh 1.13 released november 22, 2012
+
+ 44. Provide a single eltclsh tcl package, including el::tools and el::complete
+ 43. Install the package library in lib/, not in share/
+ 42. Rewrite build system with automake
+ 41. Load/save command history at startup/exit, and improve el::history command
+     to configure the file name and history size (~/.eltclhistory and 800 items
+     by default).
+
+eltclsh 1.12 released june 16, 2011
+
+ 40. Change resource file to ~/.eltclshrc instead of .eltclshrc
+     (resp. ~/.elwishrc). (York Wu).
+ 39. Fix automatic detection of Tcl-8.5.
+ 38. Add el::maxCols to limit the number of columns for completion results
+     0 (default) means automatic (Russell Treleaven).
+ 37. Setting el::queryItems to 0 disable interactive confirmation before
+     displaying completion results (Russel Treleaven).
+ 36. Parse .editrc before binding ^I to eltcl-complete (Russel Treleaven).
+ 35. Fix bug in el::gets when invoked before the 'interactive' procedure
+     (Russel Treleaven).
+
+eltclsh 1.11 released january 21, 2010
+
+ 34. Add a pkg-config .pc file
+ 33. Provide eltclsh as a Tcl extension as well (eltclsh and elwish now make
+     use of this extension).
+ 32. Support for native aqua Tcl/Tk support on Mac OS X
+
+eltclsh 1.10 released february 27, 2009
+
+ 31. Only install man page and remove cat page. Easier than having to deal
+     with different names on all platforms. From joerg in NetBSD/pkgsrc.
+
+eltclsh 1.9 released august 8, 2008
+
+ 30. Fix libtool usage and install target to allow cross compilation in
+     OpenEmbedded.
+ 29. Honor TCL_DBGX to allow  compiling  against a  tcl library  with debugging
+     symbols enabled.
+ 28. Honor CFLAGS from the environment during the build process
+ 27. Fix history command that was not working.
+ 26. Switch repository to git.
+
+eltclsh 1.8 released august 20, 2007
+
+ 25. Add wrappedputs procedure that print a string wrapped to a given width.
+ 24. Stop scanning arguments in interactive mode when user press C-d.
+
+eltclsh 1.7 released december 19, 2006
+
+ 23. Add new function "interactive" which starts the interactive
+     interpreter (useful inside scripts).
+ 22. Add support for installation in $(DESTDIR)
+
+elctlsh 1.6 released october 04, 2005
+
+ 21. Don't use insecure string manipulation functions.
+ 20. provide package el::base for the new commands in the interpreter.
+     Make tools.tcl require el::base so that it cannot be loaded by
+     accident in an interpreter that doesn't provide those functions.
+ 19. Add an autogen.sh script. Remove un-needed files from CVS control.
+     list files that don't belong to version control in .cvsignore.
+
+eltclsh 1.5 released march 17, 2004
+
+ 18. Improve autoconf stuff: cross-compilation, select between termcap or
+ ncurses libs, option to disable Tk.
+ 17. Print an error message when init files are not found.
+ 16. Initialize iinfo structure to 0. Bugzilla #6 from Matthieu Herrb.
+ 15.  Do  more   robust checking  when    looking  for  the LAAS    mkdep
+ executable. Bugzilla #4 from Matthieu Herrb.
+
+eltclsh 1.4 released december 3, 2003
+
+ 14. Source eltclsh libraries after appInitProc() to make packages loaded
+ with the -package option and requiring Tk happy.
+ 13. Look for packages in libdir and datadir by default.
+ 12. Define revision numbers in a single place (config.mk).
+ 11. Added a README file.
+
+eltclsh 1.3 released october 17, 2003
+
+ 10. Distribution now extracts into eltclsh (no more bin/ prefix).
+  9. Add standard paths to tclConfig.sh for Linux Debian distributions.
+
+eltclsh 1.2 released september 28, 2003
+
+  8. Allow configure scripts to work without mkdep.
+  7. Use tclsh instead of eltclsh for building pkgIndex.
+  6. fix for build against Tcl 8.4 after const poisoning fix (#2).
+  5.  Improved command-line completion engine   when the smallest  common
+  denominator of   the  available matches  is   smaller  than the current
+  command-line.
+  4. Add -package command line option.
+  3.   Look for  packages    in $(datadir)/*  by  default,  and implement
+  ELTCLLIBPATH environment variable.
+
+eltclsh 1.1 released august 13, 2003
+
+  2.  fix  for build against  Tcl  8.4 (const poisoning). Addresses PR/11
+  from Matthieu Herrb.
+  1.  configure  fix:   look  for libedit   in  $prefix/lib  to   support
+  configuration without --exec-prefix. From Matthieu Herrb in PR/10.
+
+eltclsh 1.0 released july 9, 2003
